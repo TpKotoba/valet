@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&family=IBM+Plex+Mono:wght@600&display=swap');
+/* Libertinus Sans suits, shared by jdh8's card sites (jdh8.github.io/fonts).
+   The unicode-range keeps it out of line-box metrics; it only draws suits. */
+@font-face {
+  font-family: 'Libertinus Suits';
+  font-weight: 1 1000;
+  font-style: oblique -90deg 90deg;
+  src: url('https://jdh8.github.io/fonts/suits.woff2') format('woff2');
+  unicode-range: U+2660, U+2663, U+2665-2666;
+}
 :root {
   --paper: #f6f5f1;
   --ink: #25332f;
@@ -8,7 +17,7 @@
   --forest: #203c32;
   --white: #fff;
   --soft: #fafaf7;
-  font-family: 'DM Sans', 'Noto Sans TC', system-ui, sans-serif;
+  font-family: 'Libertinus Suits', 'DM Sans', 'Noto Sans TC', system-ui, sans-serif;
   color: var(--ink);
   background: var(--paper);
   font-size: 14px;
@@ -111,7 +120,7 @@ small {
   letter-spacing: -0.8px;
 }
 .brand-symbol {
-  font-family: 'Source Serif 4', serif;
+  font-family: 'Libertinus Suits', 'Source Serif 4', serif;
   color: #d6aaa0;
   font-size: 39px;
 }
@@ -260,7 +269,7 @@ small {
   display: grid;
   place-items: center;
   background: #e8e9e2;
-  font: italic 16px 'Source Serif 4';
+  font: italic 16px 'Libertinus Suits', 'Source Serif 4';
   color: #5d6d5f;
 }
 .icon-button {
@@ -817,20 +826,20 @@ tbody tr.followed {
 }
 .mono {
   font-variant-numeric: tabular-nums;
-  font-family: 'DM Sans', ui-monospace, monospace;
+  font-family: 'Libertinus Suits', 'DM Sans', ui-monospace, monospace;
 }
 .team-raw-score {
   white-space: nowrap;
   overflow-wrap: normal;
 }
 .butler-total {
-  font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  font-family: 'Libertinus Suits', ui-monospace, 'Cascadia Mono', Consolas, monospace;
   font-variant-numeric: tabular-nums;
 }
 .butler-imp {
   display: inline-block;
   margin-left: 5px;
-  font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  font-family: 'Libertinus Suits', ui-monospace, 'Cascadia Mono', Consolas, monospace;
   font-size: 10px;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -1076,7 +1085,7 @@ select {
   letter-spacing: 1.5px;
 }
 .deal-center strong {
-  font-family: 'Source Serif 4', serif;
+  font-family: 'Libertinus Suits', 'Source Serif 4', serif;
   font-size: 34px;
   line-height: 1.3;
   font-weight: 400;
@@ -2211,7 +2220,7 @@ table a:focus-visible {
   background: white;
   color: #27332f;
   font:
-    14px/1.6 'DM Sans',
+    14px/1.6 'Libertinus Suits', 'DM Sans',
     sans-serif;
   white-space: normal;
   box-shadow: 0 6px 24px #27332f26;
@@ -2380,7 +2389,7 @@ table a:focus-visible {
 }
 .playing-card small {
   font:
-    10px ui-monospace,
+    10px 'Libertinus Suits', ui-monospace,
     monospace;
   color: #285746;
 }
@@ -2422,7 +2431,7 @@ table a:focus-visible {
   background: #e8f0ea;
   color: #173f31;
   font:
-    700 16px ui-monospace,
+    700 16px 'Libertinus Suits', ui-monospace,
     monospace;
   cursor: pointer;
 }
@@ -2622,10 +2631,10 @@ table th[aria-sort='descending'] > button {
   gap: 4px;
   text-align: center;
   color: #34473d;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Libertinus Suits', 'DM Sans', sans-serif;
 }
 .board-information .board-number {
-  font: 700 min(20px, 18cqw) / 1.15 'Source Serif 4', serif;
+  font: 700 min(20px, 18cqw) / 1.15 'Libertinus Suits', 'Source Serif 4', serif;
   color: inherit;
 }
 .board-information .board-average {
@@ -2818,7 +2827,7 @@ table th[aria-sort='descending'] > button {
   background: #fffefa;
   box-shadow: 0 2px 3px #244b3814;
   font:
-    700 min(24px, 20cqw)/1.05 'Source Serif 4',
+    700 min(24px, 20cqw)/1.05 'Libertinus Suits', 'Source Serif 4',
     serif;
   font-variant-numeric: lining-nums tabular-nums;
   color: #244b38;
@@ -2886,8 +2895,9 @@ table th[aria-sort='descending'] > button {
   line-height: 1.1;
 }
 .bridge-suit > b {
-  font-family: 'Source Serif 4', 'Times New Roman', serif;
-  font-size: min(26px, 20cqw);
+  font-family: 'Libertinus Suits', 'Source Serif 4', 'Times New Roman', serif;
+  /* Libertinus Suits are drawn at cap height: match .bridge-ranks. */
+  font-size: min(22px, 14cqw);
   line-height: 1;
 }
 .bridge-suit .red {
@@ -2899,7 +2909,7 @@ table th[aria-sort='descending'] > button {
   min-width: 0;
   white-space: nowrap;
   overflow: visible;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Libertinus Suits', 'IBM Plex Mono', monospace;
   font-size: min(22px, 14cqw);
   font-weight: 600;
   letter-spacing: 0;
@@ -2951,7 +2961,7 @@ table th[aria-sort='descending'] > button {
   background: #b4d77980;
   color: #27401c;
   font:
-    500 0.55em/1.1 'DM Sans',
+    500 0.55em/1.1 'Libertinus Suits', 'DM Sans',
     sans-serif;
   font-variant-numeric: lining-nums tabular-nums;
   text-align: center;
@@ -2997,7 +3007,7 @@ table th[aria-sort='descending'] > button {
 }
 .analysis-corner.par-corner .corner-kicker,
 .analysis-corner.board-information .corner-kicker {
-  font: 800 min(10px, 9cqw)/1.2 'DM Sans', sans-serif;
+  font: 800 min(10px, 9cqw)/1.2 'Libertinus Suits', 'DM Sans', sans-serif;
   letter-spacing: 0.04em;
   color: #728b7b;
 }
@@ -3028,7 +3038,7 @@ table th[aria-sort='descending'] > button {
 .board-metadata span {
   line-height: 1.15;
   overflow-wrap: anywhere;
-  font-family: 'Source Serif 4', serif;
+  font-family: 'Libertinus Suits', 'Source Serif 4', serif;
   font-weight: 700;
   font-size: min(20px, 18cqw);
 }
@@ -3067,7 +3077,7 @@ table th[aria-sort='descending'] > button {
 }
 .analysis-corner.par-corner .contract-score,
 .analysis-corner.board-information .board-average {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Libertinus Suits', 'DM Sans', sans-serif;
   font-size: min(14px, 13cqw);
   font-weight: 400;
   line-height: 1.4;
@@ -3090,7 +3100,7 @@ table th[aria-sort='descending'] > button {
   justify-items: center;
   align-items: center;
   font:
-    700 min(17px, 16cqw) 'Source Serif 4',
+    700 min(17px, 16cqw) 'Libertinus Suits', 'Source Serif 4',
     serif;
 }
 .hcp-compass span:nth-child(1) {
@@ -3111,7 +3121,7 @@ table th[aria-sort='descending'] > button {
   table-layout: fixed;
   border-collapse: collapse;
   font:
-    700 min(13px, 12cqw) 'Source Serif 4',
+    700 min(13px, 12cqw) 'Libertinus Suits', 'Source Serif 4',
     serif;
 }
 .compact-dd th,
@@ -3131,7 +3141,7 @@ table th[aria-sort='descending'] > button {
   gap: min(3px, 2cqw);
   margin-bottom: min(7px, 5cqw);
   font:
-    700 min(19px, 15cqw)/1.2 'Source Serif 4',
+    700 min(19px, 15cqw)/1.2 'Libertinus Suits', 'Source Serif 4',
     serif;
   white-space: nowrap;
 }
@@ -3234,12 +3244,12 @@ table th[aria-sort='descending'] > button {
 }
 .rack-card > span {
   font:
-    700 clamp(12px, 5cqw, 22px)/1.1 'Source Serif 4',
+    700 clamp(12px, 5cqw, 22px)/1.1 'Libertinus Suits', 'Source Serif 4',
     serif;
 }
 .rack-card > b {
   font:
-    700 clamp(12px, 5cqw, 22px)/1.1 'Source Serif 4',
+    700 clamp(12px, 5cqw, 22px)/1.1 'Libertinus Suits', 'Source Serif 4',
     serif;
   font-variant-numeric: lining-nums tabular-nums;
 }
@@ -3643,7 +3653,7 @@ main > .section-collapse[aria-controls='event-dashboard'][aria-expanded='false']
 .your-contract .contract-seat,
 .your-contract .contract-outcome {
   color: #8c948b;
-  font-family: 'DM Sans', 'Noto Sans TC', sans-serif;
+  font-family: 'Libertinus Suits', 'DM Sans', 'Noto Sans TC', sans-serif;
   font-size: 0.55em;
   font-weight: 400;
 }
@@ -3816,7 +3826,7 @@ main > .section-collapse[aria-controls='event-dashboard'][aria-expanded='false']
 .delete-competition-option strong { display: block; font-size: 14px; }
 .delete-competition-option small { display: block; margin-top: 4px; color: var(--muted); }
 .valet-system-title { white-space: nowrap; }
-.valet-wordmark { font-family: Georgia, 'Times New Roman', serif; letter-spacing: -0.045em; }
+.valet-wordmark { font-family: 'Libertinus Suits', Georgia, 'Times New Roman', serif; letter-spacing: -0.045em; }
 .valet-wordmark sub, .valet-wordmark sup { position: relative; vertical-align: baseline; font-size: 0.72em; line-height: 0; }
 .valet-wordmark sub { bottom: -0.22em; margin-left: -0.08em; margin-right: -0.03em; }
 .valet-wordmark sup { top: -0.25em; margin-left: -0.08em; margin-right: -0.05em; }
@@ -3910,7 +3920,7 @@ main > .section-collapse[aria-controls='event-dashboard'][aria-expanded='false']
 .valet-brand .valet-brand-diamond { color: #b88370; font-size: 25px; line-height: 1; }
 .valet-brand:hover { opacity: 0.8; }
 
-.valet-brand .valet-wordmark, .sidebar-wordmark { display: inline-block; font-family: 'Bodoni MT', Didot, 'Times New Roman', serif; font-weight: 500; -webkit-text-stroke: 0.2px currentColor; letter-spacing: 0.035em; transform: scaleX(0.88); transform-origin: left center; margin-right: -0.42em; }
+.valet-brand .valet-wordmark, .sidebar-wordmark { display: inline-block; font-family: 'Libertinus Suits', 'Bodoni MT', Didot, 'Times New Roman', serif; font-weight: 500; -webkit-text-stroke: 0.2px currentColor; letter-spacing: 0.035em; transform: scaleX(0.88); transform-origin: left center; margin-right: -0.42em; }
 .hub-account { position: relative; flex-shrink: 0; z-index: 30; background: #edf1eb; border-radius: 12px; }
 .hub-account.expanded { border-radius: 12px 12px 0 0; }
 .hub-account .hub-session { border-radius: inherit; }
